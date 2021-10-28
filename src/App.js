@@ -28,6 +28,7 @@ class App extends Component{
     return(
       <Router>
         <Header />
+        <div className="App">
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/chickenindex" component={ChickenIndex} />
@@ -36,6 +37,7 @@ class App extends Component{
           <Route path="/chickenedit" component={ChickenEdit} />
           <Route component={NotFound}/>
         </Switch>
+        </div>
         <Footer/>
       </Router>
     )

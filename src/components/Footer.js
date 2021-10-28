@@ -5,6 +5,7 @@ class Footer extends Component{
   render(){
     return(
         <footer>
+            <div className="footer-links">
             <ul>
                 <NavLink to="/">&copy: 2021 Charlean & Phil</NavLink>
             </ul>
@@ -14,6 +15,7 @@ class Footer extends Component{
             <ul>
                 <NavLink to="/chickennew">Add a chicken</NavLink>
             </ul>
+            </div>
         </footer>
     )
   }

@@ -29,3 +29,7 @@ Notes from Phil and Charlean
 8. Make sure that the images source titles coincide within the curly braces.
 9. When we are pulling from the repository make sure that we are on the current branch.
 10. Remember that everything will be ok.
+11.  test.todo is trickery  Fail code suggested. After review, found it is a placeholder
+12. ensure that the yarn test enzyme is ran before yarn test
+13. make sure import the component page at the top
+14. Rinse, repeat

@@ -31,8 +31,14 @@ class App extends Component{
         <div className="App">
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/chickenindex" component={ChickenIndex} />
-          <Route path="/chickenshow" component={ChickenShow} />
+          <Route path="/chickenindex"
+            render={(props) => <ChickenIndex chickens={this.state.chickens} />} />
+          <Route path="/chickenshow/:id"
+            render={(props) => {
+              let id = props.match.params.id
+              let chicken = this.state.chickens.find(c => c.id === +id)
+              return <ChickenShow chicken={chicken} />
+            }} />
           <Route path="/chickennew" component={ChickenNew} />
           <Route path="/chickenedit" component={ChickenEdit} />
           <Route component={NotFound}/>

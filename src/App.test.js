@@ -4,6 +4,7 @@ import Adapter from 'enzyme-adapter-react-16'
 import App from './App'
 import Home from './pages/Home'
 import ChickenIndex from './pages/ChickenIndex'
+import chickens from './mockChickens.js'
 
 Enzyme.configure({ adapter: new Adapter() })
 
@@ -19,5 +20,15 @@ describe('When the app renders', ()=>{
     expect(renderedHeader.length).toEqual(1)
 
     expect(renderedFooter.length).toEqual(1)
+  })
+  it('provides a route "/" to the home component', () => {
+    const renderedApp = shallow(<App/>)
+    const renderedHomeRoute = renderedApp.find('[path="/"]')
+    expect(renderedHomeRoute.props().component).toEqual(Home)
+  })
+  it('provides a route "/chickenindex" to the ChickenIndex component', () => {
+    const renderedApp = shallow(<App/>)
+    const renderedChickenIndexRoute = renderedApp.find('[path="/chickenindex"]')
+    expect(renderedChickenIndexRoute.props().render()).toEqual(<ChickenIndex chickens={chickens} />)
   })
 })

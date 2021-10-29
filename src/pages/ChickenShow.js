@@ -4,7 +4,14 @@ class ChickenShow extends Component {
   render() {
     return (
       <>
-        <h3>I am the Chicken Show</h3>
+        <h3>See what is under the feathers</h3>
+        { this.props.chicken &&
+          <>
+            <p>{this.props.chicken.name}</p>
+            <p>{this.props.chicken.age}</p>
+            <p>{this.props.chicken.enjoys}</p>
+          </>
+        }
       </>
     )
   }

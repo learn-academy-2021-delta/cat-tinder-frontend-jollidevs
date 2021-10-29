@@ -20,21 +20,4 @@ describe('When the app renders', ()=>{
 
     expect(renderedFooter.length).toEqual(1)
   })
-//   it('provides a route "/" to the home component', ()=>{
-    
-//     const renderedApp = shallow(<App/>)
-
-//     const renderedHomeRoute = renderedApp.find('[path="/"]')
-
-//     // console.log("props", renderedHomeRoute.props())
-    
-//     expect(renderedHomeRoute.props().component).toEqual(Home)
-//   })
-//   it('provides a route "/catindex" to the CatIndex component', ()=>{
-    
-//     const renderedApp = shallow(<App/>)
-
-//     const renderedCatIndexRoute = renderedApp.find('[path="/catindex"]')
-//     expect(renderedCatIndexRoute.props().component).toEqual(CatIndex)
-//   })
 })

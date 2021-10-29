@@ -12,8 +12,3 @@ describe('When Header loads...',() => {
     expect(navLinkWrapper.length).toEqual(3)
   })
 })
-//   it('provides a link to the local ASPCA',() => {
-//     const headerWrapper = shallow(<Header/>)
-//     const aTagWrapper = headerWrapper.find('[id="aspca"]')
-//     expect(aTagWrapper.length).toEqual(1)
-//   })

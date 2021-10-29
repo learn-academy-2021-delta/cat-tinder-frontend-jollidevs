@@ -17,3 +17,19 @@ $ git checkout -b main
 $ git add .
 $ git commit -m "it is our default branch"
 $ git push origin main
+
+Notes from Phil and Charlean
+1. Put more notes in Readme.
+2. Make sure we put trello card in "doing" column while working.
+3. PR review.
+4. CSS we can add styles by separating class names with commas.
+5. We can add CSS by putting class name, however, we need to ensure that it is encapsulated by the switch, so that it does not populate outside.
+6. Do not delete all boiler plate in index.js, or you'll get a white screen.
+7. Opened the folder for assets and transfered images into it.
+8. Make sure that the images source titles coincide within the curly braces.
+9. When we are pulling from the repository make sure that we are on the current branch.
+10. Remember that everything will be ok.
+11.  test.todo is trickery  Fail code suggested. After review, found it is a placeholder
+12. ensure that the yarn test enzyme is ran before yarn test
+13. make sure import the component page at the top
+14. Rinse, repeat

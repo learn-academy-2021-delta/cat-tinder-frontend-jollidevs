@@ -38,3 +38,4 @@ Notes from Phil and Charlean
 17. JSX is not rendered then check imports
 18. Click the lightbulb near the error
 19. Rerun the test sometimes it is acting ridiculous
+20. Grab a form code snippet fro react strap

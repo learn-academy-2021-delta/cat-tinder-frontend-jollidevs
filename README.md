@@ -33,3 +33,8 @@ Notes from Phil and Charlean
 12. ensure that the yarn test enzyme is ran before yarn test
 13. make sure import the component page at the top
 14. Rinse, repeat
+15. Like for real, really really, don't forget that import it helps define the Navlink and photos
+16. use the regular terminal to be the server and the terminal in vs code to run test
+17. JSX is not rendered then check imports
+18. Click the lightbulb near the error
+19. Rerun the test sometimes it is acting ridiculous

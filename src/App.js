@@ -24,6 +24,10 @@ class App extends Component{
     }
   }
 
+  createNewChicken = (newchicken) => {
+    console.log(newchicken)
+  }
+
   render(){
     return(
       <Router>
@@ -39,7 +43,8 @@ class App extends Component{
               let chicken = this.state.chickens.find(c => c.id === +id)
               return <ChickenShow chicken={chicken} />
             }} />
-          <Route path="/chickennew" component={ChickenNew} />
+          <Route path="/chickennew" render={(props) => <ChickenNew createNewChicken={this.createNewChicken} />}
+          />
           <Route path="/chickenedit" component={ChickenEdit} />
           <Route component={NotFound}/>
         </Switch>

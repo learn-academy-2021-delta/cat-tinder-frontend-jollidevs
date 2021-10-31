@@ -1,4 +1,8 @@
-.chicken-logo,.nav-links,.footer-links{
+/* .cat-logo {
+  width: 100px;
+  margin-left: 20px;
+} */
+.chicken-logo,.nav-links,{
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -13,6 +17,51 @@
   width: 50%;
 }
 
+form{
+  background-color: #f7f39a;
+}
 .App{
   text-align: center;
+}
+
+/* ---HEADER--- */
+header {
+  background-color: #38817a;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding-right: 50px;
+}
+
+/* ---NAV--- */
+a {
+  color: #f7f39a !important;
+  text-decoration: none !important;
+}
+a:hover {
+  cursor: pointer !important;
+  color: #f7f39a !important;
+  text-decoration: underline !important;
+}
+
+/* ---NOT FOUND--- */
+.chicken-friend {
+  width: 400px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+/* ---FOOTER--- */
+footer, .footer-links {
+  font-size: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #38817a;
+  display: flex;
+  justify-content: space-around;
 }

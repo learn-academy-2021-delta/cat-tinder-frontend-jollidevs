@@ -1,10 +1,11 @@
-.chicken-logo,.nav-links,.footer-links{
-  display: block;
+.chicken-logo{
+  width: 200px;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
   text-align: center;
+  display: block;
 }
+
 .page-body{
   text-align: center;
   display: block;
@@ -13,6 +14,51 @@
   width: 50%;
 }
 
+form{
+  background-color: #f7f39a;
+}
 .App{
   text-align: center;
+}
+
+/* ---HEADER--- */
+header, footer {
+  background-color: #38817a;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-links, .footer-links{
+  padding-right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ---NAV--- */
+a {
+  color: #f7f39a !important;
+  text-decoration: none !important;
+}
+a:hover {
+  cursor: pointer !important;
+  color: #f7f39a !important;
+  text-decoration: underline !important;
+}
+
+/* ---NOT FOUND--- */
+.chicken-friend {
+  width: 400px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+/* ---FOOTER--- */
+footer{
+  font-size: 12px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #38817a;
+  display: flex;
+  justify-content: space-around;
 }

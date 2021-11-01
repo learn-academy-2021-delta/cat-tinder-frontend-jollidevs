@@ -39,3 +39,8 @@ Notes from Phil and Charlean
 18. Click the lightbulb near the error
 19. Rerun the test sometimes it is acting ridiculous
 20. Grab a form code snippet from react strap
+21. To send info up the river from a child, a function/method needs to be created.--->functional props
+22. Createchicken takes an argument...needs to be in app.js and chickennew
+23. Handle change stores the changed info, it gets called for every submission
+24. handle submit will store the input, called when we are ready to send a forn up --->handle by the button...parent will call the function
+25. redirect needs a specific moment to be triggered....conditional rendering with a toggle, true----->a setstate method and false on the constructor. Then the toggle has the JSX tag that is truthy and then the info that will become truthy after it is passed

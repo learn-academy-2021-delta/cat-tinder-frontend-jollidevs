@@ -65,11 +65,11 @@ class ChickenNew extends Component {
               value={this.state.form.enjoys}
             />
           </FormGroup>
+        </Form>
           <Button name="submit" onClick={this.handleSubmit}>
             Add a New Chicken
           </Button>
-        </Form>
-        {this.state.submitted && <Redirect to="/catindex" />}
+        {this.state.submitted && <Redirect to="/chickenindex" />}
       </>
     )
   }

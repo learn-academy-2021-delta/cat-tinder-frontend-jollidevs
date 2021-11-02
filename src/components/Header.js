@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
-import chickenLogo from '../assets/chicken-logo.png'
+import chickenLogo from '../assets/Chicken1-removebg-preview (1).png'
 
 class Header extends Component{
   render(){

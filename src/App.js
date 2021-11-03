@@ -20,16 +20,40 @@ class App extends Component{
   constructor(props){
     super(props)
     this.state = {
-      chickens: chickens
+      chickens: chickens, 
+      color: "#f7f39a"
     }
   }
 
+componentDidMount(){
+  this.readChicken()
+}
+
+readChicken = () => {
+  fetch("http://localhost:3000/chickens")
+  .then(response => response.json())
+  .then(chickenArray => this.setState({chickens: chickenArray}))
+  .catch(errors => (console.log(errors)))
+ 
+}
+
   createNewChicken = (newchicken) => {
     console.log(newchicken)
+    fetch("http://localhost:3000/chickens", {
+      body: JSON.stringify(newchicken),
+      headers: {
+        "Content-Type" : "application/json"
+      },
+      method: "POST"
+    })
+    .then(response => response.json())
+    .then(payload => this.readChicken())
+    .catch(errors => (console.log(errors)))
   }
 
   render(){
     return(
+      <div style={{ background: this.state.color }} id="main">
       <Router>
         <Header />
         <div className="App">
@@ -51,6 +75,7 @@ class App extends Component{
         </div>
         <Footer/>
       </Router>
+      </div>
     )
   }
 }

@@ -44,3 +44,6 @@ Notes from Phil and Charlean
 23. Handle change stores the changed info, it gets called for every submission
 24. handle submit will store the input, called when we are ready to send a forn up --->handle by the button...parent will call the function
 25. redirect needs a specific moment to be triggered....conditional rendering with a toggle, true----->a setstate method and false on the constructor. Then the toggle has the JSX tag that is truthy and then the info that will become truthy after it is passed
+26. You can use inline styling by adding CSS to the attributestyle <h1 style={{backgroundColor: "lightblue"}}>Hello Style!</h1>
+27. https://www.pluralsight.com/guides/change-page-background-color-each-route
+28. Remember to import images on the current working page

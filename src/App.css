@@ -14,6 +14,17 @@
   width: 50%;
 }
 
+.index-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card.card-body {
+  width: 300px;
+  background-color: #FFFEF1;
+  margin: 20px;
+}
+
 form{
   background-color: #f7f39a;
 }

@@ -11,10 +11,14 @@ class Header extends Component{
             </NavLink>
             <div className="nav-links">
                 <ul>
+                    <button style={{backgroundColor: "#848484"}}>
                     <NavLink to="/chickenindex">Meet the Chickens</NavLink>
+                    </button>
                 </ul>
                 <ul>
+                    <button style={{backgroundColor: "#848484"}}>
                     <NavLink to="/chickennew">Add a Chicken</NavLink>
+                    </button>
                 </ul>
             </div>
         </header>

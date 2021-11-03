@@ -7,7 +7,7 @@ class Footer extends Component{
         <footer>
             <div className="footer-links">
             <ul>
-                <NavLink to="/">&copy: 2021 Charlean & Phil</NavLink>
+                <NavLink to="/">@ 2021 Charlean & Phil</NavLink>
             </ul>
             <ul>
                 <NavLink to="/chickenindex">Meet All the chickens</NavLink>

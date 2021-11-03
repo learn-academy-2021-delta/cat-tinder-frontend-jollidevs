@@ -30,7 +30,7 @@ class ChickenNew extends Component {
     console.log(this.state.form)
     return (
       <>
-        <h3>I am the Chicken New</h3>
+        <h3>Plenty of space for new chickens</h3>
         <Form>
           <FormGroup>
             <Label for="name">

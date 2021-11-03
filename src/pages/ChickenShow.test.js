@@ -5,10 +5,16 @@ import ChickenShow from './ChickenShow'
 
 Enzyme.configure({ adapter: new Adapter() })
 
-describe('When ChickenShow loads...',() => {
-    it ('displays a heading', () => {
-        const chickenShow = shallow(<ChickenShow/>)
-        const showHeading = chickenShow.find('h3')
-        expect(showHeading.text()).toEqual('See what is under the feathers')
+describe('When ChickenShow loads',() => {
+    const chicken = {
+          id: 1,
+          name: "Biscuits",
+          age: 5,
+          enjoys: "rooftops and trees"
+        }
+    it ('displays a card', () => {
+        const chickenShow = shallow(<ChickenShow chicken={chicken}/>)
+        const card = chickenShow.find("Card")
+        expect(card.length).toEqual(1)
     })    
 })

@@ -47,3 +47,21 @@ Notes from Phil and Charlean
 26. You can use inline styling by adding CSS to the attributestyle <h1 style={{backgroundColor: "lightblue"}}>Hello Style!</h1>
 27. https://www.pluralsight.com/guides/change-page-background-color-each-route
 28. Remember to import images on the current working page
+29. Here are options for the Edit.test.js
+        describe("When CatEdit renders", () => {
+            it("displays a heading", () => {
+                const catEdit = shallow(<CatEdit />)
+                const editheading = catEdit.find("h3")
+                expect(editheading.text()).toEqual("Update Cat Information")
+            })
+            it("displays a form", () => {
+                const catEdit = shallow(<CatEdit />)
+                const formGroup = catEdit.find("FormGroup")
+                expect(formGroup.length).toEqual(3)
+                const label = catEdit.find("Label")
+                expect(label.length).toEqual(3)
+                const input = catEdit.find("Input")
+                expect(input.length).toEqual(3)
+            })
+        })
+30. Youu can wrap a button around the navlink. I love inline styling

@@ -14,13 +14,11 @@ import {
 } from 'react-router-dom'
 import './App.css'
 
-import chickens from './mockChickens.js'
-
 class App extends Component{
   constructor(props){
     super(props)
     this.state = {
-      chickens: chickens, 
+      chickens: [], 
       color: "#f7f39a"
     }
   }
@@ -38,7 +36,6 @@ readChicken = () => {
 }
 
   createNewChicken = (newchicken) => {
-    console.log(newchicken)
     fetch("http://localhost:3000/chickens", {
       body: JSON.stringify(newchicken),
       headers: {
@@ -49,6 +46,31 @@ readChicken = () => {
     .then(response => response.json())
     .then(payload => this.readChicken())
     .catch(errors => (console.log(errors)))
+  }
+
+  updateChicken = (editedChicken, id) => {
+    fetch(`http://localhost:3000/chickens/${id}`,{
+      body: JSON.stringify(editedChicken),
+      headers: {
+        "Content-Type" : "application/json"
+      },
+      method: "PATCH"
+    })
+    .then(response => response.json())
+    .then(payload => this.readChicken())
+    .catch(errors => (console.log(errors)))
+  }
+
+  deleteChicken = (id) => {
+    fetch(`http://localhost:3000/chickens/${id}`, {
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "DELETE"
+    })
+    .then(response => response.json())
+    .then(payload => this.readChicken())
+    .catch(errors => console.log("delete errors:", errors))
   }
 
   render(){
@@ -65,11 +87,17 @@ readChicken = () => {
             render={(props) => {
               let id = props.match.params.id
               let chicken = this.state.chickens.find(c => c.id === +id)
-              return <ChickenShow chicken={chicken} />
+              return <ChickenShow chicken={chicken} deleteChicken={this.deleteChicken} />
             }} />
           <Route path="/chickennew" render={(props) => <ChickenNew createNewChicken={this.createNewChicken} />}
           />
-          <Route path="/chickenedit" component={ChickenEdit} />
+          <Route path="/chickenedit/:id"
+              render={(props) => {
+                let id = props.match.params.id
+                let chicken = this.state.chickens.find(c => c.id === +id)
+                return <ChickenEdit chicken={chicken} updateChicken={this.updateChicken } id={id} />
+              }}
+            /> 
           <Route component={NotFound}/>
         </Switch>
         </div>

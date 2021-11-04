@@ -1,11 +1,14 @@
 .chicken-logo{
-  width: 200px;
-  margin-left: auto;
+  width: 150px;
+  margin-left: 20px;
   margin-right: auto;
+  border: solid 5px;
   text-align: center;
   display: block;
 }
-
+#borders{
+  padding: 20px;
+}
 .page-body{
   text-align: center;
   display: block;

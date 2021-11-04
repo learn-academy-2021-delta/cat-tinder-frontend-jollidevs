@@ -64,4 +64,5 @@ Notes from Phil and Charlean
                 expect(input.length).toEqual(3)
             })
         })
-30. Youu can wrap a button around the navlink. I love inline styling
+30. You can wrap a button around the navlink. I love inline styling
+31. For inline styling you need to use pascel case for the attribute and a comma to separate multiple attributes instead of a semi-colon. The value is always in quotation marks.

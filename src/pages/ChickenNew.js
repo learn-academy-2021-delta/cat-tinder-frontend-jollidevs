@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap'
 import { Redirect } from 'react-router-dom'
+import chickenLogo from '../assets/Rooster1.png'
 
 class ChickenNew extends Component {
   constructor(props){
@@ -31,6 +32,7 @@ class ChickenNew extends Component {
     return (
       <>
         <h3>Plenty of space for new chickens</h3>
+        <img style={{display:"block", marginLeft:"auto", marginRight:"auto"}}src={chickenLogo} alt="logo for Chicken Tinder" className="chicken-logo"/>
         <Form>
           <FormGroup>
             <Label for="name">

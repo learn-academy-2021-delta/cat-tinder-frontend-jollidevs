@@ -8,7 +8,7 @@ Enzyme.configure({ adapter: new Adapter() })
 describe('When Home loads...',() => {
     it ('displays a heading', () => {
         const homeWrapper = shallow(<Home/>)
-        expect(homeWrapper.find('h3').text()).toEqual('Home is where the coop is')
+        expect(homeWrapper.find('h1').text()).toEqual('Welcome to Chicken Tinder')
     })    
 })
 
